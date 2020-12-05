@@ -9,7 +9,7 @@ class GalleryList extends Component {
             <div>
                 <h2>hello from GalleryList component</h2>
                 {this.props.gallery.map(image => 
-                    <img src="image.path" alt="hey"></img>
+                    <img src={image.path} alt="hey"></img>
                     )}
             </div>
         ); // end return
