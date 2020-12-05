@@ -1,5 +1,6 @@
 // imports
 import React, { Component } from 'react';
+import './GalleryList.css';
 
 // class
 class GalleryList extends Component {
