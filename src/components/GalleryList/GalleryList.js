@@ -9,9 +9,13 @@ class GalleryList extends Component {
         return (
             <div>
                 <h2>hello from GalleryList component</h2>
-                {this.props.gallery.map(image => 
-                    <img src={image.path} alt="hey"></img>
+                <div className="container">
+                    {this.props.gallery.map(image =>
+                        <div className="image">
+                            <img src={image.path} alt="hey"></img>
+                        </div>
                     )}
+                </div>
             </div>
         ); // end return
     } // end render
