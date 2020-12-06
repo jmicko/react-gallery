@@ -13,14 +13,12 @@ class GalleryList extends Component {
                 <h2>hello from GalleryList component</h2>
                 <div className="container">
                     {this.props.gallery.map(image =>
-
                         <GalleryItems
                             key={image.id}
                             image={image}
-                        // swap={this.props.swap} 
-                        // clickImage={this.props.clickImage} 
+                            getAllPictures={this.props.getAllPictures}
+                        // like={this.props.like}
                         />
-
                     )}
                 </div>
             </div>

@@ -29,6 +29,7 @@ class App extends Component {
       })
   }
 
+
   render() {
     return (
       <div className="App">
@@ -36,12 +37,12 @@ class App extends Component {
           <h1 className="App-title">Gallery of my life</h1>
         </header>
         <br />
-        <GalleryList 
-        gallery={this.state.gallery} 
-        swap={this.state.swap} 
-        clickImage={this.clickImage} />
+        <GalleryList
+          gallery={this.state.gallery}
+          getAllPictures={this.getAllPictures}
+          // like={this.like}
+        />
         <p>Gallery goes here</p>
-        {/* <img src="images/goat_small.jpg" alt="goat" /> */}
       </div>
     );
   }
