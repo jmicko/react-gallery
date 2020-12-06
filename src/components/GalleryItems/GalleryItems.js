@@ -17,17 +17,17 @@ class GalleryItems extends Component {
     }
 
 
-  like = () => {
-    axios.put(`/gallery/like/${this.props.image.id}`)
-      .then((response) => {
-        console.log('Response:', response);
-        this.props.getAllPictures();
-      })
-      .catch((error) => {
-        alert('Something bad happened');
-        console.log('error', error);
-      })
-  }
+    like = () => {
+        axios.put(`/gallery/like/${this.props.image.id}`)
+            .then((response) => {
+                console.log('Response:', response);
+                this.props.getAllPictures();
+            })
+            .catch((error) => {
+                alert('Something bad happened');
+                console.log('error', error);
+            })
+    }
 
 
     render() {
@@ -39,6 +39,15 @@ class GalleryItems extends Component {
                         <img src={this.props.image.path} alt="hey"></img>
                     }
                 </div>
+                <p>
+                    {
+                        (this.props.image.likes === 0)
+                        ? 'No one likes this image!'
+                        : (this.props.image.likes === 1)
+                        ? '1 person likes this image!'
+                        : `${this.props.image.likes} people like this image`
+                    }
+                </p>
                 <button onClick={this.like} >Like!</button>
             </div>
         ) // end return
