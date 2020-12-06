@@ -38,7 +38,6 @@ class App extends Component {
         <br />
         <GalleryList
           gallery={this.state.gallery}
-          // {/* // PLACEHOLDER ====================================== */}
           getAllPictures={this.getAllPictures}
         />
         <p>Gallery goes here</p>
