@@ -1,9 +1,29 @@
-# Project Name
+![REPO SIZE](https://img.shields.io/github/repo-size/jmicko/react-gallery.svg?style=flat-square)
+![TOP_LANGUAGE](https://img.shields.io/github/languages/top/jmicko/react-gallery.svg?style=flat-square)
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+# React Gallery
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+_Duration: Weekend_
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+Build a gallery to dislpay pictures from a folder. Each picture should have a like button, and when the picture is clicked, it should toggle with the description of the picture.
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/en/)
+- [Nodemon](https://www.npmjs.com/package/nodemon)
+
+## Installation
+
+1. clone repo
+2. npm install
+3. npm run server
+4. (in a new terminal) npm run client
+5. App will now be accessible in the browser at http://localhost:3000/
+
+## Built With
+
+- React
+- Express
+- Node.js
