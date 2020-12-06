@@ -16,7 +16,6 @@ class GalleryItems extends Component {
         })
     }
 
-
     like = () => {
         axios.put(`/gallery/like/${this.props.image.id}`)
             .then((response) => {
@@ -34,21 +33,26 @@ class GalleryItems extends Component {
         return (
             <div>
                 <div className="image" onClick={this.clickImage}>
-                    {this.state.swap ?
-                        <p>{this.props.image.description}</p> :
-                        <img src={this.props.image.path} alt="hey"></img>
+                    {
+                        this.state.swap
+                            ? <p>{this.props.image.description}</p>
+                            : <img src={this.props.image.path} alt="hey"></img>
                     }
                 </div>
-                <p>
-                    {
-                        (this.props.image.likes === 0)
-                        ? 'No one likes this image!'
-                        : (this.props.image.likes === 1)
-                        ? '1 person likes this image!'
-                        : `${this.props.image.likes} people like this image`
-                    }
-                </p>
-                <button onClick={this.like} >Like!</button>
+                <div>
+
+                    <p>
+                        {
+                            // nested ternary because I can
+                            (this.props.image.likes === 0)
+                                ? 'No one likes this image!'
+                                : (this.props.image.likes === 1)
+                                    ? '1 person likes this image!'
+                                    : `${this.props.image.likes} people like this image`
+                        }
+                    </p>
+                    <button onClick={this.like} >Like!</button>
+                </div>
             </div>
         ) // end return
     } // end render

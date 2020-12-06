@@ -5,31 +5,30 @@ import GalleryList from '../GalleryList/GalleryList';
 
 
 class App extends Component {
-
   state = {
     gallery: [],
   }
-
+  
   componentDidMount() {
     console.log('component did mount');
     this.getAllPictures();
   }
-
+  
   getAllPictures = () => {
     axios.get('/gallery')
-      .then((response) => {
-        console.log('Response: ', response.data);
-        this.setState({
-          gallery: response.data
-        })
+    .then((response) => {
+      console.log('Response: ', response.data);
+      this.setState({
+        gallery: response.data
       })
-      .catch((error) => {
-        alert('Something bad happened');
-        console.log('error', error);
-      })
+    })
+    .catch((error) => {
+      alert('Something bad happened');
+      console.log('error', error);
+    })
   }
-
-
+  
+  
   render() {
     return (
       <div className="App">
@@ -39,8 +38,8 @@ class App extends Component {
         <br />
         <GalleryList
           gallery={this.state.gallery}
+          // {/* // PLACEHOLDER ====================================== */}
           getAllPictures={this.getAllPictures}
-          // like={this.like}
         />
         <p>Gallery goes here</p>
       </div>

@@ -14,10 +14,10 @@ class GalleryList extends Component {
                 <div className="container">
                     {this.props.gallery.map(image =>
                         <GalleryItems
-                            key={image.id}
-                            image={image}
-                            getAllPictures={this.props.getAllPictures}
-                        // like={this.props.like}
+                        // {/* // PLACEHOLDER ====================================== */}
+                        key={image.id}
+                        image={image}
+                        getAllPictures={this.props.getAllPictures}
                         />
                     )}
                 </div>
