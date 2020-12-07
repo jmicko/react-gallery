@@ -10,7 +10,6 @@ class GalleryList extends Component {
         console.log(this.props.gallery);
         return (
             <div>
-                <h2>hello from GalleryList component</h2>
                 <div className="container">
                     {this.props.gallery.map(image =>
                         <GalleryItems

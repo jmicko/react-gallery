@@ -40,7 +40,6 @@ class App extends Component {
           gallery={this.state.gallery}
           getAllPictures={this.getAllPictures}
         />
-        <p>Gallery goes here</p>
       </div>
     );
   }
