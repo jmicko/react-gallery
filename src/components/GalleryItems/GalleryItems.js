@@ -20,6 +20,7 @@ class GalleryItems extends Component {
         axios.put(`/gallery/like/${this.props.image.id}`)
             .then((response) => {
                 console.log('Response:', response);
+                // passed through from app because it needs access to the App props
                 this.props.getAllPictures();
             })
             .catch((error) => {

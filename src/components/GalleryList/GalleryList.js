@@ -16,6 +16,7 @@ class GalleryList extends Component {
                         <GalleryItems
                         key={image.id}
                         image={image}
+                        // passed through from app because it needs access to the App props
                         getAllPictures={this.props.getAllPictures}
                         />
                     )}
