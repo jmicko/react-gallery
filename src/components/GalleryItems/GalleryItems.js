@@ -12,6 +12,7 @@ class GalleryItems extends Component {
 
     clickImage = () => {
         this.setState({
+            // toggle picture and description
             swap: !this.state.swap
         })
     }
@@ -35,6 +36,7 @@ class GalleryItems extends Component {
             <div>
                 <div className="image" onClick={this.clickImage}>
                     {
+                        // check if picture or description should be displayed
                         this.state.swap
                             ? <p>{this.props.image.description}</p>
                             : <img src={this.props.image.path} alt="hey"></img>
@@ -45,13 +47,17 @@ class GalleryItems extends Component {
                     <p>
                         {
                             // nested ternary because I can
+                            // check if no likes
                             (this.props.image.likes === 0)
                                 ? 'No one likes this image!'
+                                // check if one like for plurality
                                 : (this.props.image.likes === 1)
                                     ? '1 person likes this image!'
+                                    // only other option is multiple likes because nothing ever subtracts likes
                                     : `${this.props.image.likes} people like this image`
                         }
                     </p>
+                    {/* trigger the like route when button is pressed */}
                     <button onClick={this.like} >Like!</button>
                 </div>
             </div>
