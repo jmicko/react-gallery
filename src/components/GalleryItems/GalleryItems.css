@@ -3,3 +3,17 @@ img{
     width: 100%;
     border-radius: .4rem;
 }
+
+.image{
+    /* margin-bottom: auto; */
+}
+
+.likes{
+    align-self: end;
+    height: fit-content;
+}
+
+.item-container{
+    display: grid;
+    grid-template-rows: auto max-content;
+}

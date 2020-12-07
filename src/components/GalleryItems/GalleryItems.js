@@ -33,7 +33,7 @@ class GalleryItems extends Component {
 
     render() {
         return (
-            <div>
+            <div className="item-container">
                 <div className="image" onClick={this.clickImage}>
                     {
                         // check if picture or description should be displayed
@@ -42,7 +42,7 @@ class GalleryItems extends Component {
                             : <img src={this.props.image.path} alt="hey"></img>
                     }
                 </div>
-                <div>
+                <div className="likes">
 
                     <p>
                         {
